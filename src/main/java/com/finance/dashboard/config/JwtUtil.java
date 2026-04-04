@@ -1,6 +1,6 @@
 package com.finance.dashboard.config;
 
-import com.finance.dashboard.entity.Users;
+import com.finance.dashboard.entity.user.Users;
 import io.jsonwebtoken.*;
 import io.jsonwebtoken.security.Keys;
 import org.springframework.stereotype.Component;

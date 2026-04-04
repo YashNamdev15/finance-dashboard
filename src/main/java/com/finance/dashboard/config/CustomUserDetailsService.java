@@ -1,6 +1,6 @@
 package com.finance.dashboard.config;
 
-import com.finance.dashboard.entity.Users;
+import com.finance.dashboard.entity.user.Users;
 import com.finance.dashboard.exception.ResourceNotFound;
 import com.finance.dashboard.repository.UserRepo;
 import org.springframework.beans.factory.annotation.Autowired;

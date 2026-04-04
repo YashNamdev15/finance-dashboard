@@ -1,6 +1,6 @@
 package com.finance.dashboard.repository;
 
-import com.finance.dashboard.entity.Users;
+import com.finance.dashboard.entity.user.Users;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

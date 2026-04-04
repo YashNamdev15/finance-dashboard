@@ -1,6 +1,6 @@
 package com.finance.dashboard.DTO.userUpdate;
 
-import com.finance.dashboard.entity.Role;
+import com.finance.dashboard.entity.user.Role;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
@@ -14,7 +14,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class updateRoleDTO {
 
-    @NotNull
-    @NotBlank
-    Role role;
+    @NotNull(message = "Role is required")
+    private Role role;
 }

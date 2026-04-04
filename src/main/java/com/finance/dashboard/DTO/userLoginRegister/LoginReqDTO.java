@@ -15,12 +15,12 @@ import lombok.NoArgsConstructor;
 @Builder
 public class LoginReqDTO {
 
-    @Email
-    @NotNull
-    @NotBlank
-    String email;
+    @Email(message = "Please enter a valid email address")
+    @NotNull(message = "Email is required")
+    @NotBlank(message = "Email cannot be blank")
+    private String email;
 
-    @NotNull
-    @NotBlank
-    String password;
+    @NotNull(message = "Password is required")
+    @NotBlank(message = "Password cannot be blank")
+    private String password;
 }

@@ -1,4 +1,4 @@
-package com.finance.dashboard.controller;
+package com.finance.dashboard.controller.user;
 
 import com.finance.dashboard.DTO.userLoginRegister.LoginReqDTO;
 import com.finance.dashboard.DTO.userLoginRegister.UserRequestDTO;
@@ -27,7 +27,7 @@ public class AuthController {
     }
 
     @GetMapping("login")
-    public ResponseEntity<?> login(@RequestBody
+    public ResponseEntity<?> login(@Valid @RequestBody
                                    LoginReqDTO loginReqDTO){
 
         String token = authService.userLogin(loginReqDTO);

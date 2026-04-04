@@ -1,6 +1,6 @@
 package com.finance.dashboard.DTO.userLoginRegister;
 
-import com.finance.dashboard.entity.Role;
+import com.finance.dashboard.entity.user.Role;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
 import lombok.*;

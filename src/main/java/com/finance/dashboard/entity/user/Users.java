@@ -1,4 +1,4 @@
-package com.finance.dashboard.entity;
+package com.finance.dashboard.entity.user;
 
 
 import jakarta.persistence.*;

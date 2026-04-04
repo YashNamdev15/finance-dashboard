@@ -1,9 +1,10 @@
-package com.finance.dashboard.controller;
+package com.finance.dashboard.controller.user;
 
 
 import com.finance.dashboard.DTO.userLoginRegister.UserResponseDTO;
 import com.finance.dashboard.DTO.userUpdate.updateRoleDTO;
 import com.finance.dashboard.service.AdminService;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -21,7 +22,7 @@ public class AdminController {
 
 
     @GetMapping("all-users")
-    @PreAuthorize("hasAnyRole('ADMIN')")
+    @PreAuthorize("hasAnyRole('ADMIN','ANALYST')")
     public ResponseEntity<?> getAllUsers(){
 
         List<UserResponseDTO> userResponseDTOs = adminService.getAllUser();
@@ -54,7 +55,7 @@ public class AdminController {
     @PreAuthorize("hasAnyRole('ADMIN')")
     public ResponseEntity<?> UpdateRole(@PathVariable
                                                Long id,
-                                        @RequestBody
+                                        @Valid @RequestBody
                                                updateRoleDTO updateRoleDTO)
     {
         UserResponseDTO user = adminService.updateRole(id, updateRoleDTO);

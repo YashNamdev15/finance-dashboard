@@ -1,5 +1,6 @@
-package com.finance.dashboard.entity;
+package com.finance.dashboard.entity.financeRecord;
 
+import com.finance.dashboard.entity.user.Users;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -20,6 +21,8 @@ public class FinanceRecord {
 
     private Double amount;
     private String category;
+
+    // Date when amount is credited or debited
     private LocalDate date;
 
     private String note;
@@ -31,6 +34,8 @@ public class FinanceRecord {
     @JoinColumn(name = "user_id")
     private Users user;
 
+    // Date when record is saved in system
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
+
 }

@@ -2,7 +2,7 @@ package com.finance.dashboard.serviceImplementation;
 
 import com.finance.dashboard.DTO.userLoginRegister.UserResponseDTO;
 import com.finance.dashboard.DTO.userUpdate.updateRoleDTO;
-import com.finance.dashboard.entity.Users;
+import com.finance.dashboard.entity.user.Users;
 import com.finance.dashboard.exception.ResourceNotFound;
 import com.finance.dashboard.repository.UserRepo;
 import com.finance.dashboard.service.AdminService;
