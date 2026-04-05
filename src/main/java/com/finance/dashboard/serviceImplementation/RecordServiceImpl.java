@@ -98,6 +98,7 @@ public class RecordServiceImpl implements RecordService {
                     ("You are not allowed to update financial records. Only Owner of record and Admin can update");
         }
 
+
         record.setAmount(financeRecordUpdateDTO.getAmount());
         record.setNote(financeRecordUpdateDTO.getNote());
         record.setCategory(financeRecordUpdateDTO.getCategory());
@@ -108,6 +109,7 @@ public class RecordServiceImpl implements RecordService {
         return mapToDto(updatedRecord);
     }
 
+    @Override
     public List<RecordResponseDTO> filterRecords(
             String type,
             String category,

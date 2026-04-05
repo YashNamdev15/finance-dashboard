@@ -1,5 +1,6 @@
 package com.finance.dashboard.advicer;
 
+import com.finance.dashboard.exception.AccessDeniedException;
 import com.finance.dashboard.exception.InvalidCredentials;
 import com.finance.dashboard.exception.ResourceNotFound;
 import org.springframework.http.HttpStatus;
@@ -38,6 +39,14 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(InvalidCredentials.class)
     public ResponseEntity<?> handleCredentials(InvalidCredentials ex){
+
+        return new ResponseEntity<>(
+                ex.getMessage(),
+                HttpStatus.UNAUTHORIZED);
+    }
+
+    @ExceptionHandler(AccessDeniedException.class)
+    public ResponseEntity<?> handleAccessDenied(AccessDeniedException ex){
 
         return new ResponseEntity<>(
                 ex.getMessage(),
