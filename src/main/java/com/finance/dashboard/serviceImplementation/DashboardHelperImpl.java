@@ -133,7 +133,7 @@ public class DashboardHelperImpl implements DashboardHelper {
     private Map<String, Double> convertToMap(List<Object[]> data) {
         return data.stream()
                 .collect(Collectors.toMap(
-                        obj -> (String) obj[0],
+                        obj -> String.valueOf(obj[0]),
                         obj -> (Double) obj[1]
                 ));
     }

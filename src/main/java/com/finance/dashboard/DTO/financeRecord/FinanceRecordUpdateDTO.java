@@ -29,6 +29,6 @@ public class FinanceRecordUpdateDTO {
 
     private String note;
 
-    @NotBlank
+    @NotNull
     private Type type;
 }

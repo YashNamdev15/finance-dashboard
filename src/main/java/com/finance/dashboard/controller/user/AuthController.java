@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 
 
 @RestController
-@RequestMapping("auth")
+@RequestMapping("/api/auth")
 public class AuthController {
 
     @Autowired
@@ -26,7 +26,7 @@ public class AuthController {
         return new ResponseEntity<>(user, HttpStatus.CREATED);
     }
 
-    @GetMapping("login")
+    @PostMapping("/login")
     public ResponseEntity<?> login(@Valid @RequestBody
                                    LoginReqDTO loginReqDTO){
 

@@ -40,7 +40,7 @@ public class RecordController {
                 records, HttpStatus.OK);
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("delete/{id}")
     @PreAuthorize("hasAnyRole('ADMIN','VIEWER')")
     public ResponseEntity<?> permanentDelete(@PathVariable Long id){
 
