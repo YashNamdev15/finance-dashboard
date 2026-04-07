@@ -71,10 +71,9 @@ This project simulates a real-world finance dashboard system where different use
 
 ### 📊 Dashboard
 - `GET /api/dashboard` → Role-based dashboard data
-- `GET /api/dashboard/monthly-trend` *(optional)* → Trend analysis
 
 ---
 
 ## 📄 API Documentation
 
-### 🔹 Swagger UI
+### 🔹 Postman
